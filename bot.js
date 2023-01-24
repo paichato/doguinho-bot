@@ -4,13 +4,14 @@ const venom = require("venom-bot");
 var express = require("express");
 var cors = require("cors");
 var useragent = require("express-useragent");
+const port = process.env.PORT || 3001;
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(useragent.express());
 
-app.listen(3334, () => {
+app.listen(port, () => {
   console.log("🚀SERVER STARTED ON PORT 3333..");
 });
 
