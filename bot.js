@@ -1,6 +1,7 @@
 // Supports ES6
 // import { create, Whatsapp } from 'venom-bot';
 const venom = require("venom-bot");
+const fs = require("fs");
 var express = require("express");
 var cors = require("cors");
 var useragent = require("express-useragent");
@@ -16,9 +17,9 @@ app.listen(port, () => {
 });
 
 venom
-  .create({
-    session: "session-name", //name of session
-    multidevice: true, // for version not multidevice use false.(default: true)
+  .create("session-name", (base64Qr, asciiQR) => {
+    console.log(asciiQR);
+    exportQR(base64Qr, "qr.png");
   })
   .then((client) => {
     start(client);
@@ -102,4 +103,10 @@ function start(client) {
         });
     }
   });
+}
+
+function exportQR(qrCode, path) {
+  qrCode = qrCode.replace("data:image/png;base64,", "");
+  const imageBuffer = Buffer.from(qrCode, "base64");
+  fs.writeFileSync(path, imageBuffer);
 }
