@@ -1,0 +1,75 @@
+2023/01/24-20:11:25.599 6370 Reusing MANIFEST C:\Users\marlo\Documents\bot\tokens\session-name\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/01/24-20:11:25.599 6370 Recovering log #327
+2023/01/24-20:11:25.604 6370 Reusing old log C:\Users\marlo\Documents\bot\tokens\session-name\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000327.log 
+2023/01/24-20:11:25.604 6370 Delete type=2 #326
+2023/01/24-20:11:25.901 6dd4 Level-0 table #332: started
+2023/01/24-20:11:25.908 6dd4 Level-0 table #332: 78604 bytes OK
+2023/01/24-20:11:25.913 6dd4 Delete type=0 #327
+2023/01/24-20:11:25.913 6dd4 Manual compaction at level-0 from '\x00f\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00g\x00\x00\x00' @ 0 : 0; will stop at '\x00f.\x02\x01\x0e\x00W\x00A\x00A\x00D\x00V\x00S\x00e\x00c\x00r\x00e\x00t\x00K\x00e\x00y' @ 518558 : 1
+2023/01/24-20:11:25.914 6dd4 Compacting 1@0 + 1@1 files
+2023/01/24-20:11:26.022 6dd4 Generated table #333@0: 102514 keys, 852795 bytes
+2023/01/24-20:11:26.022 6dd4 Compacted 1@0 + 1@1 files => 852795 bytes
+2023/01/24-20:11:26.024 6dd4 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/01/24-20:11:26.024 6dd4 Delete type=2 #332
+2023/01/24-20:11:26.025 6dd4 Manual compaction at level-0 from '\x00f.\x02\x01\x0e\x00W\x00A\x00A\x00D\x00V\x00S\x00e\x00c\x00r\x00e\x00t\x00K\x00e\x00y' @ 518558 : 1 .. '\x00g\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/01/24-20:11:26.059 6dd4 Level-0 table #335: started
+2023/01/24-20:11:26.062 6dd4 Level-0 table #335: 6414 bytes OK
+2023/01/24-20:11:26.064 6dd4 Delete type=2 #329
+2023/01/24-20:11:26.064 6dd4 Delete type=0 #331
+2023/01/24-20:11:26.065 6dd4 Manual compaction at level-0 from '\x00e\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00f\x00\x00\x00' @ 0 : 0; will stop at '\x00g\x00\x00\xc8\x11\x00w\x00o\x00r\x00k\x00e\x00r\x00_\x00w\x00a\x00m\x00_\x00e\x00v\x00e\x00n\x00t\x00s' @ 521086 : 1
+2023/01/24-20:11:26.065 6dd4 Compacting 1@0 + 1@1 files
+2023/01/24-20:11:26.160 6dd4 Generated table #336@0: 102565 keys, 854346 bytes
+2023/01/24-20:11:26.160 6dd4 Compacted 1@0 + 1@1 files => 854346 bytes
+2023/01/24-20:11:26.162 6dd4 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/01/24-20:11:26.162 6dd4 Delete type=2 #335
+2023/01/24-20:11:26.162 6dd4 Manual compaction at level-0 from '\x00g\x00\x00\xc8\x11\x00w\x00o\x00r\x00k\x00e\x00r\x00_\x00w\x00a\x00m\x00_\x00e\x00v\x00e\x00n\x00t\x00s' @ 521086 : 1 .. '\x00f\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/01/24-20:11:26.163 6dd4 Level-0 table #338: started
+2023/01/24-20:11:26.168 6dd4 Level-0 table #338: 516 bytes OK
+2023/01/24-20:11:26.170 6dd4 Delete type=2 #333
+2023/01/24-20:11:26.170 6dd4 Delete type=0 #334
+2023/01/24-20:11:26.171 6dd4 Manual compaction at level-0 from '\x00d\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00e\x00\x00\x00' @ 0 : 0; will stop at '\x00d\x02\x02\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 521230 : 0
+2023/01/24-20:11:26.171 6dd4 Compacting 1@0 + 1@1 files
+2023/01/24-20:11:26.284 6dd4 Generated table #339@0: 102540 keys, 853429 bytes
+2023/01/24-20:11:26.284 6dd4 Compacted 1@0 + 1@1 files => 853429 bytes
+2023/01/24-20:11:26.285 6dd4 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/01/24-20:11:26.286 6dd4 Delete type=2 #338
+2023/01/24-20:11:26.287 6dd4 Manual compaction at level-0 from '\x00d\x02\x02\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 521230 : 0 .. '\x00e\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/01/24-20:11:26.288 6370 Level-0 table #341: started
+2023/01/24-20:11:26.292 6370 Level-0 table #341: 13772 bytes OK
+2023/01/24-20:11:26.294 6370 Delete type=2 #336
+2023/01/24-20:11:26.294 6370 Delete type=0 #337
+2023/01/24-20:11:26.295 6370 Manual compaction at level-0 from '\x00c\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00d\x00\x00\x00' @ 0 : 0; will stop at '\x00c\x06 \x03\x00\x00\x00\x00\x00\x80V@\x00\x01\x0b\x00I\x00d\x00T\x00t\x00l\x009\x000\x00D\x00a\x00y\x00s' @ 521611 : 0
+2023/01/24-20:11:26.296 6370 Compacting 1@0 + 1@1 files
+2023/01/24-20:11:26.467 6370 Generated table #342@0: 102163 keys, 832745 bytes
+2023/01/24-20:11:26.467 6370 Compacted 1@0 + 1@1 files => 832745 bytes
+2023/01/24-20:11:26.468 6370 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/01/24-20:11:26.469 6370 Delete type=2 #341
+2023/01/24-20:11:26.469 6370 Manual compaction at level-0 from '\x00c\x06 \x03\x00\x00\x00\x00\x00\x80V@\x00\x01\x0b\x00I\x00d\x00T\x00t\x00l\x009\x000\x00D\x00a\x00y\x00s' @ 521611 : 0 .. '\x00d\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/01/24-20:13:04.859 6370 Compacting 1@1 + 1@2 files
+2023/01/24-20:13:04.887 6370 Generated table #343@1: 366 keys, 5091 bytes
+2023/01/24-20:13:04.887 6370 Compacted 1@1 + 1@2 files => 5091 bytes
+2023/01/24-20:13:04.888 6370 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/01/24-20:13:04.889 6370 Delete type=2 #5
+2023/01/24-20:13:04.889 6370 Delete type=2 #339
+2023/01/24-20:13:04.889 6370 Delete type=2 #342
+2023/01/24-20:13:08.870 5710 Level-0 table #345: started
+2023/01/24-20:13:08.913 5710 Level-0 table #345: 1128213 bytes OK
+2023/01/24-20:13:08.915 5710 Delete type=0 #340
+2023/01/24-20:13:09.460 5710 Level-0 table #347: started
+2023/01/24-20:13:09.506 5710 Level-0 table #347: 875071 bytes OK
+2023/01/24-20:13:09.508 5710 Delete type=0 #344
+2023/01/24-20:13:09.512 6dd4 Compacting 1@0 + 1@1 files
+2023/01/24-20:13:09.613 6dd4 Generated table #348@0: 46110 keys, 1229085 bytes
+2023/01/24-20:13:09.613 6dd4 Compacted 1@0 + 1@1 files => 1229085 bytes
+2023/01/24-20:13:09.614 6dd4 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/01/24-20:14:38.132 5710 Level-0 table #350: started
+2023/01/24-20:14:38.171 5710 Level-0 table #350: 996907 bytes OK
+2023/01/24-20:14:38.174 5710 Delete type=2 #345
+2023/01/24-20:14:38.174 5710 Delete type=0 #346
+2023/01/24-20:14:38.174 5710 Delete type=2 #347
+2023/01/24-20:15:26.783 5710 Compacting 1@0 + 1@1 files
+2023/01/24-20:15:26.869 5710 Generated table #351@0: 63644 keys, 1613776 bytes
+2023/01/24-20:15:26.869 5710 Compacted 1@0 + 1@1 files => 1613776 bytes
+2023/01/24-20:15:26.871 5710 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/01/24-20:15:26.871 5710 Delete type=2 #348
+2023/01/24-20:15:26.871 5710 Delete type=2 #350
