@@ -32,13 +32,16 @@ venom
           return res.send("Erro: parametros em falta");
         }
 
+        if (!client.isConnected) {
+          return res.send(
+            "Erro: cliente ainda nao conectou, tente novamente mais tarde."
+          );
+        }
+
         if (msg.toLowerCase().includes("code")) {
-          console.log("o codigo é:", msg.split(",")[1]);
+          const code = msg.split(",")[1];
           await client
-            .sendText(
-              `${phonenumber}@c.us`,
-              `O seu código OTP é:" ${msg.split(",")[1]}`
-            )
+            .sendText(`${phonenumber}@c.us`, `O seu código OTP é:" ${code}`)
             .then((result) => {
               console.log(result);
               if (result.status !== 200) {
@@ -46,9 +49,9 @@ venom
               }
               res.send("code sent");
             })
-            .catch((error) => {
-              console.log(error);
-              res.send(error);
+            .catch((erro) => {
+              console.log(erro ?? "erro ao enviar mensagem");
+              res.send(erro ?? "erro ao enviar mensagem");
             });
         }
         if (msg.toLowerCase().startsWith("/contacts")) {
