@@ -27,38 +27,42 @@ venom
     app.post("/code", async (req, res) => {
       const { msg, phonenumber } = req.body;
 
-      if (!msg) {
-        return res.send("Erro: parametros em falta");
-      }
+      try {
+        if (!msg) {
+          return res.send("Erro: parametros em falta");
+        }
 
-      if (msg.toLowerCase().includes("code")) {
-        console.log("o codigo e:", msg.split(",")[1]);
-        return client
-          .sendText(
-            `${phonenumber + "@c.us"}`,
-            `O seu codigo OTP e:" ${msg.split(",")[1]}`
-          )
-          .then((result) => {
-            console.log(result);
-            if (result.status !== 200) {
-              return res.send(result.text);
-            }
-            res.send("code sent");
-          })
-          .catch((error) => {
-            console.log(error);
-            res.send(error);
-          });
-      }
-      if (msg.toLowerCase().startsWith("/contacts")) {
-        return client
-          .getAllChatsContacts()
-          .then((result) => {
-            return res.send(result);
-          })
-          .catch((err) => {
-            res.send(err);
-          });
+        if (msg.toLowerCase().includes("code")) {
+          console.log("o codigo e:", msg.split(",")[1]);
+          return await client
+            .sendText(
+              `${phonenumber + "@c.us"}`,
+              `O seu codigo OTP e:" ${msg.split(",")[1]}`
+            )
+            .then((result) => {
+              console.log(result);
+              if (result.status !== 200) {
+                return res.send(result.text);
+              }
+              res.send("code sent");
+            })
+            .catch((error) => {
+              console.log(error);
+              res.send(error);
+            });
+        }
+        if (msg.toLowerCase().startsWith("/contacts")) {
+          return await client
+            .getAllChatsContacts()
+            .then((result) => {
+              return res.send(result);
+            })
+            .catch((err) => {
+              res.send(err);
+            });
+        }
+      } catch (error) {
+        res.send(error);
       }
     });
   })
@@ -66,7 +70,7 @@ venom
     console.log(erro);
   });
 
-function start(client) {
+async function start(client) {
   client.onMessage((message) => {
     if (message.body === "Ola" && message.isGroupMsg === false) {
       client
