@@ -33,11 +33,11 @@ venom
         }
 
         if (msg.toLowerCase().includes("code")) {
-          console.log("o codigo e:", msg.split(",")[1]);
-          return await client
+          console.log("o codigo é:", msg.split(",")[1]);
+          await client
             .sendText(
-              `${phonenumber + "@c.us"}`,
-              `O seu codigo OTP e:" ${msg.split(",")[1]}`
+              `${phonenumber}@c.us`,
+              `O seu código OTP é:" ${msg.split(",")[1]}`
             )
             .then((result) => {
               console.log(result);
@@ -52,7 +52,7 @@ venom
             });
         }
         if (msg.toLowerCase().startsWith("/contacts")) {
-          return await client
+          await client
             .getAllChatsContacts()
             .then((result) => {
               return res.send(result);
