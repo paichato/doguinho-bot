@@ -28,14 +28,12 @@ venom
       const { msg, phonenumber } = req.body;
 
       if (!msg) {
-        //erro something is wrong
         return res.send("Erro: parametros em falta");
-        console.log("erro: sem parametros");
       }
 
       if (msg.toLowerCase().includes("code")) {
         console.log("o codigo e:", msg.split(",")[1]);
-        client
+        return client
           .sendText(
             `${phonenumber + "@c.us"}`,
             `O seu codigo OTP e:" ${msg.split(",")[1]}`
@@ -53,9 +51,14 @@ venom
           });
       }
       if (msg.toLowerCase().startsWith("/contacts")) {
-        client.getAllChatsContacts().then((result) => {
-          return res.send(result);
-        });
+        return client
+          .getAllChatsContacts()
+          .then((result) => {
+            return res.send(result);
+          })
+          .catch((err) => {
+            res.send(err);
+          });
       }
     });
   })
@@ -72,34 +75,21 @@ function start(client) {
           "Ola, seja bem vindo a Doguinho. Eu serei o seu assistente pessoal."
         )
         .then((result) => {
-          console.log("Result: ", result); //return object success
+          console.log("Result: ", result);
         })
         .catch((erro) => {
-          console.error("Error when sending: ", erro); //return object error
+          console.error("Error when sending: ", erro);
         });
     }
 
-    if (message.body.toLowerCase() === "menu" && message.isGroupMsg === false) {
-      const buttons = [
-        {
-          buttonText: {
-            displayText: "Text of Button 1",
-          },
-        },
-        {
-          buttonText: {
-            displayText: "Text of Button 2",
-          },
-        },
-      ];
-
+    if (message.body.toLowerCase() === "code" && message.isGroupMsg === false) {
       client
-        .sendButtons(message.from, "Title", buttons, "Description")
+        .sendText(message.from, "Boa tentativa 😂")
         .then((result) => {
-          console.log("Result: ", result); //return object success
+          console.log("Result: ", result);
         })
         .catch((erro) => {
-          console.error("Error when sending: ", erro); //return object error
+          console.error("Error when sending: ", erro);
         });
     }
   });
