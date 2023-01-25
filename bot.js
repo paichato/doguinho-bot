@@ -41,7 +41,7 @@ venom
         if (msg.toLowerCase().includes("code")) {
           const code = msg.split(",")[1];
           await client
-            .sendText(`${phonenumber}@c.us`, `O seu código OTP é:" ${code}`)
+            .sendText(`${phonenumber}@c.us`, `O seu código OTP é:*${code}*`)
             .then((result) => {
               console.log(result);
               if (result.status !== 200) {
